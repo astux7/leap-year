@@ -1,7 +1,9 @@
 function isLeapYear(yr) {
-  if (yr % 4 !== 0) {
-      return "common";
+  var year = +yr;
+
+  if(typeof year !== typeof NaN || isNaN(year)) {
+    return "not a year";
   }
-      return "leap";
+  return (year % 4 == "") ? "leap" : "common";
 }
 
