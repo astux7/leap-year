@@ -1,8 +1,10 @@
 function isLeapYear(yr) {
 
+  var num = 4;
+
   switch (true) {
-    case (yr % 4 !== 0):
-    case (yr % 400 !== 0):
+    case (yr % num !== 0):
+    case (yr % num*100 !== 0):
       return "common";
       break;
     default :
